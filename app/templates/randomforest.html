@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Random Forest</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.rf_first_field.label }}<br>
+            {{ form.rf_first_field(size=32) }}
+        </p>
+        <p>
+            {{ form.rf_second_field.label }}<br>
+            {{ form.rf_first_field(size=32) }}
+        </p>
+        <p>{{ form.rf_boolean }} {{ form.rf_boolean.label }}</p>
+        <p>{{ form.rf_submit() }}</p>
+
+        <img src={{ url}} alt="Chart" height="420" width="480">
+    </form>
+{% endblock %}

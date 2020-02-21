@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Witaj użytkowniku!</h1>
+    <h2>Poniższa strona jest wizualizacją zadania Laboratorium nr. 2 przedmiotu 'ALGORYTMY I EKSPLORACJA DANYCH'</h2>
+    <div><p>Napisz prostą aplikację webową za pomocą której będzie można przeprowadzić proces klasyfikacji i testowania, tj.</p></div>
+    {% for tasks in tasks %}
+    <div><p>{{ tasks.number }} : <b>{{ tasks.content }}</b></p></div>
+    {% endfor %}
+{% endblock %}

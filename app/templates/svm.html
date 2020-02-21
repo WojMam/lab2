@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>SVM</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.svm_first_field.label }}<br>
+            {{ form.svm_first_field(size=32) }}
+        </p>
+        <p>
+            {{ form.svm_second_field.label }}<br>
+            {{ form.svm_first_field(size=32) }}
+        </p>
+        <p>{{ form.svm_boolean }} {{ form.svm_boolean.label }}</p>
+        <p>{{ form.svm_picker() }}</p>
+        <p>{{ form.svm_submit() }}</p>
+
+        <img src={{ url}} alt="Chart" height="420" width="480">
+    </form>
+{% endblock %}

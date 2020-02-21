@@ -1,0 +1,23 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }}</title>
+      {% else %}
+      <title>Lab 2</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>
+            Laboratorium 2:
+            <a href="/index">Home</a>
+{#            <a href="/login">Login</a>#}
+            <a href="/svm">SVM</a>
+            <a href="/knn">kNN</a>
+            <a href="/decisiontree">Decision Tree</a>
+            <a href="/randomforest">Random Forest</a>
+            <a href="/randomimage">Random Image</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

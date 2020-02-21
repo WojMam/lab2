@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>kNN</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+w
+            {{ form.knn_first_field(size=32) }}
+            {% for error in form.knn_first_field.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.knn_second_field.label }}<br>
+            {{ form.knn_first_field(size=32) }}
+            {% for error in form.knn_second_field.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.knn_boolean }} {{ form.knn_boolean.label }}</p>
+        <p>{{ form.knn_submit() }}</p>
+
+        <img src={{ url}} alt="Chart" height="420" width="480">
+    </form>
+{% endblock %}
